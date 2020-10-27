@@ -1,0 +1,14 @@
+<div class="">
+    <h2 class="filter__heading">filter</h2>
+    <div class="filter__content">
+        <div class="filter__details margin-b-m" *ngFor="let filter of filters">
+            <p><u>{{filter.label}}</u></p>
+            <div class="filter__details--heading">
+                <ul class="flex">
+                    <li [class.active]="option.selected" (click)="applyFilter(filter, option)"
+                        *ngFor="let option of filter.options">{{option.label}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

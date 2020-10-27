@@ -1,0 +1,23 @@
+<div class="">
+    <div class="product__img">
+        <img [src]="product?.links?.mission_patch" alt="image" class="img-responsive block">
+    </div>
+    <div class="product__details">
+        <h2 class="product__name">
+            {{product?.mission_name}} #{{product?.flight_number}}
+        </h2>
+        <div class="mission-id" *ngIf="product?.mission_id && product.mission_id.length">
+            <strong>Mission Ids :</strong>
+            <ul>
+                <li class="color-blue-light">{{product?.mission_id}}</li>
+            </ul>
+        </div>
+        <p><strong>Launch Year</strong> : <span class="color-blue-light">{{product?.launch_year}}</span></p>
+        <p><strong>Successfull Launch </strong> : <span class="color-blue-light">{{product?.launch_success}}</span>
+        </p>
+        <p><strong>Successfull Landing </strong> : <span class="color-blue-light"></span>
+        </p>
+
+    </div>
+
+</div>

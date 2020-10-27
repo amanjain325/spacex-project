@@ -1,1 +1,229 @@
 /* You can add global styles to this file, and also import other style files */
+/* 
+Mobile - 700px 
+Tablet - 700 to 1024px
+Desktop - 1024 to 1440 
+max-width 1440 and center align.
+
+Layout Technique - Flex
+*/
+
+
+/* color variables */
+:root {
+    --color-bg: #F2F2F2;
+    --color-white: #fff;
+    --color-blue: #444F92;
+    --color-blue-light: #757794;
+    --color-green-secondary: #C8DCA8;
+    --color-green: #7AB903;
+}
+
+/* Common Css */
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    -webkit-text-size-adjust: none;
+    scroll-behavior: smooth;
+}
+
+*,
+:before,
+:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    font-family: "SF Pro Text Regular", Arial, Helvetica, sans-serif;
+    background-color: var(--color-bg);
+    line-height: 1.3;
+    font-size: 100%;
+}
+
+.margin-b-m {
+    margin-bottom: 2rem;
+}
+
+.img-responsive {
+    width: 100%;
+    max-width: 100%;
+}
+.block {
+    display: block;
+}
+
+.color-blue{
+    color: var(--color-blue);
+}
+.color-blue-light{
+    color: var(--color-blue-light);
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between
+}
+
+
+
+/* Main Css */
+
+.container {
+    padding: 1rem 1.5rem;
+    width: 1440px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.heading {
+    font-size: 3rem;
+}
+
+/* Filter Css Start */
+
+.filter {
+    background-color: var(--color-white);
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.filter .filter__heading {
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+
+.filter .filter__content {
+    padding: 1rem;
+}
+
+.filter__content .filter__details p {
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 1rem;
+
+}
+
+.filter__details .filter__details--heading ul {
+    list-style: none;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.filter__details .filter__details--heading ul li {
+    width: calc(50% - 20px);
+    padding: 5px 10px;
+    background: var(--color-green-secondary);
+    border-radius: 6px;
+    font-size: 1.6rem;
+    margin: 1rem 0;
+    cursor: pointer;
+}
+
+.filter__details--heading ul li.active {
+    background: var(--color-green);
+}
+
+/* Filter Css End */
+
+
+/* Detail Card Css start */
+
+
+.wrapper{
+    flex-direction: column;
+}
+
+.product__card {
+    flex-direction: column;
+}
+
+.product__card .card {
+    padding: 2rem;
+    background-color: var(--color-white);
+    border-radius: 1rem;
+    width: 100%;
+}
+
+.card .product__img {
+    width: 100%;
+}
+
+.card .product__details {
+    margin: 1rem 0;
+}
+
+.product__details .product__name {
+    color: var(--color-blue);
+}
+
+.product__details .mission-id,
+.product__details p {
+    font-size: 1.6rem;
+    margin: 1rem 0;
+}
+.product__details .mission-id ul{
+    display: inline-block;
+    margin-left: 2rem;
+}
+
+/* Detail Card Css End */
+
+/* footer */
+footer{
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 2rem;
+}
+/* footer End */
+
+
+/* Media Query */
+
+@media (min-width: 701px) and (max-width: 1024px){
+    .wrapper{
+        flex-direction: row;
+    }
+    .wrapper .filter{
+        width: calc(30% - 10px);
+        align-self: start;
+    }
+    .wrapper .product__card{
+        width: calc(70% - 10px);
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .wrapper .product__card .card{
+        width: calc((100% - 20px) / 2);
+        margin-right: 1rem;
+        align-self: flex-start;
+        max-height: 46rem;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .wrapper{
+        flex-direction: row;
+    }
+    .wrapper .filter{
+        width: calc(20% - 10px);
+        align-self: start;
+    }
+    .wrapper .product__card{
+        width: calc(80% - 10px);
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .wrapper .product__card .card{
+        width: calc((97% - 20px) / 4);
+        margin-right: 1rem;
+        /* align-self: flex-start; */
+        max-height: 46rem;
+    }
+}

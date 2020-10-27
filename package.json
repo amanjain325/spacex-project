@@ -1,4 +1,4 @@
- {
+{
   "name": "spacex",
   "version": "0.0.0",
   "scripts": {
@@ -8,11 +8,11 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "dev:ssr": "ng run spacex:serve",
-    "serve": "node dist/spacex/server/main.js",
+    "dev:ssr": "ng run spacex:serve-ssr",
+    "serve:ssr": "node dist/spacex/server/main.js",
     "build:ssr": "ng build --prod && ng run spacex:server:production",
     "prerender": "ng run spacex:prerender",
-    "postinstall": "ng run spacex:serve"
+    "postinstall": "ng run spacex:serve-ssr"
   },
   "private": true,
   "dependencies": {
