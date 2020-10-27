@@ -12,7 +12,7 @@
     "serve:ssr": "node dist/spacex/server/main.js",
     "build:ssr": "ng build --prod && ng run spacex:server:production",
     "prerender": "ng run spacex:prerender",
-    "postinstall": "ng build --output-path dist/spacex/browser  --aot --prod"
+    "postinstall": "ng build --output-path dist/spacex/browser  --aot --prod && ng run spacex:server:production"
   },
   "private": true,
   "dependencies": {
